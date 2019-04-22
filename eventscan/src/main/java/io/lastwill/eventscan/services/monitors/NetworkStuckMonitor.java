@@ -47,6 +47,8 @@ public class NetworkStuckMonitor {
     private long neoInterval;
     @Value("${io.lastwill.eventscan.network-stuck.interval.tron}")
     private long tronInterval;
+    @Value("${io.lastwill.eventscan.network-stuck.interval.binance}")
+    private long binanceInterval;
     @Value("${io.lastwill.eventscan.network-stuck.interval.pending}")
     private long pendingInterval;
     @Value("${io.lastwill.eventscan.network-stuck.interval.max-notification}")
@@ -71,6 +73,8 @@ public class NetworkStuckMonitor {
         checkFrequencies.put(NetworkType.EOS_TESTNET, eosInterval);
         checkFrequencies.put(NetworkType.TRON_MAINNET, tronInterval);
         checkFrequencies.put(NetworkType.TRON_TESTNET, tronInterval);
+        checkFrequencies.put(NetworkType.BINANCE_MAINNET, binanceInterval);
+        checkFrequencies.put(NetworkType.BINANCE_TESTNET, binanceInterval);
 
         notifyFrequencies.putAll(checkFrequencies);
 

@@ -51,6 +51,8 @@ public class BotIntegration {
         put(NetworkType.EOS_MAINNET, "EOS");
         put(NetworkType.TRON_TESTNET, "tTRON");
         put(NetworkType.TRON_MAINNET, "TRON");
+        put(NetworkType.BINANCE_TESTNET, "tBNB");
+        put(NetworkType.BINANCE_MAINNET, "BNB");
     }};
 
     private final String defaultNetwork = "unknown";
